@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6915ba507886db43fa470c92_7c225534-a836-4532-9ac6-0d83263fe922",
+  "id": "Sheet14_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Sheet14",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}
