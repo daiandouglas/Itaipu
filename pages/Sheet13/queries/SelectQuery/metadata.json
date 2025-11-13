@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6915ba507886db43fa470c92_8bdae378-74df-4457-aea1-1cb280d070ad",
-  "id": "Sheet12_InsertQuery",
+  "gitSyncId": "6915ba507886db43fa470c92_458b5749-65d4-48ef-8268-09ad04143230",
+  "id": "Sheet13_SelectQuery",
   "pluginId": "google-sheets-plugin",
   "pluginType": "SAAS",
   "unpublishedAction": {
@@ -8,13 +8,24 @@
       "encodeParamsToggle": true,
       "formData": {
         "command": {
-          "componentData": "INSERT_ONE",
-          "data": "INSERT_ONE",
+          "componentData": "FETCH_MANY",
+          "data": "FETCH_MANY",
           "viewType": "component"
         },
         "entityType": {
           "componentData": "ROWS",
           "data": "ROWS",
+          "viewType": "component"
+        },
+        "pagination": {
+          "componentData": {
+            "limit": "{{data_table.pageSize}}",
+            "offset": "{{(data_table.pageNo - 1) * data_table.pageSize}}"
+          },
+          "data": {
+            "limit": "{{data_table.pageSize}}",
+            "offset": "{{(data_table.pageNo - 1) * data_table.pageSize}}"
+          },
           "viewType": "component"
         },
         "projection": {
@@ -28,11 +39,6 @@
         "range": {
           "data": ""
         },
-        "rowObjects": {
-          "componentData": "{{insert_form.formData}}",
-          "data": "{{insert_form.formData}}",
-          "viewType": "component"
-        },
         "sheetName": {
           "componentData": "template_table",
           "data": "Sheet1",
@@ -44,13 +50,36 @@
           "viewType": "component"
         },
         "smartSubstitution": {
-          "componentData": true,
-          "data": true,
+          "componentData": false,
+          "data": false,
           "viewType": "component"
+        },
+        "sortBy": {
+          "data": [
+            {
+              "column": "",
+              "order": "Ascending"
+            }
+          ]
         },
         "tableHeaderIndex": {
           "componentData": "1",
           "data": "1",
+          "viewType": "component"
+        },
+        "where": {
+          "componentData": {
+            "children": [
+              {}
+            ],
+            "condition": "AND"
+          },
+          "data": {
+            "children": [
+              {}
+            ],
+            "condition": "AND"
+          },
           "viewType": "component"
         }
       },
@@ -58,7 +87,7 @@
       "pluginSpecifiedTemplates": [
         {
           "key": "method",
-          "value": "APPEND"
+          "value": "GET"
         },
         {
           "key": "sheetUrl",
@@ -82,7 +111,7 @@
         },
         {
           "key": "rowLimit",
-          "value": ""
+          "value": "{{data_table.pageSize}}"
         },
         {
           "key": "sheetName",
@@ -90,11 +119,10 @@
         },
         {
           "key": "rowOffset",
-          "value": ""
+          "value": "{{(data_table.pageNo - 1) * data_table.pageSize}}"
         },
         {
-          "key": "rowObject",
-          "value": "{{insert_form.formData}}"
+          "key": "rowObject"
         },
         {
           "key": "rowObjects"
@@ -109,7 +137,13 @@
         },
         {
           "key": "smartSubstitution",
-          "value": true
+          "value": false
+        },
+        {
+          "key": "where",
+          "value": [
+            {}
+          ]
         }
       ],
       "timeoutInMillisecond": 10000
@@ -122,9 +156,9 @@
       "pluginId": "google-sheets-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "InsertQuery",
-    "pageId": "Sheet12",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "name": "SelectQuery",
+    "pageId": "Sheet13",
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }

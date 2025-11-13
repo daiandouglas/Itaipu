@@ -167,9 +167,6 @@
     },
     {
       "key": "onSubmit"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -247,7 +244,7 @@
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
-          "label": "Setor",
+          "label": "Step",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "step",
           "position": 0,
@@ -298,7 +295,7 @@
   },
   "scrollContents": true,
   "showReset": true,
-  "sourceData": "{{data_table.selectedRow}}",
+  "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"__primaryKey__\", \"rowIndex\")}}",
   "submitButtonLabel": "Update",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
