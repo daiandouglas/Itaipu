@@ -1,0 +1,32 @@
+{
+  "gitSyncId": "6915ba507886db43fa470c92_f11c56bd-8822-476b-9e6b-b8b4b78f9ef1",
+  "unpublishedPage": {
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 380,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0,
+          "minHeight": 890,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "snapRows": 125,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 94,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Sheet1",
+    "slug": "sheet1"
+  }
+}
